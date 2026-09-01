@@ -219,6 +219,12 @@ h2 em {
   font-size: clamp(40px, 4vw, 58px);
   margin: 0 0 19px;
 }
+
+.rounded-heading {
+  font-family: "Arial Rounded MT Bold", "Malgun Gothic", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -2.6px;
+}
 .body-copy {
   max-width: 630px;
   color: #4b6271;

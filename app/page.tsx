@@ -1,19 +1,239 @@
-import { ArrowUpRight, ArrowRight, BookOpen, BrainCircuit, Building2, Check, Sparkles, UsersRound } from 'lucide-react';
+import {
+  ArrowUpRight,
+  ArrowRight,
+  BookOpen,
+  BrainCircuit,
+  Building2,
+  Check,
+  Sparkles,
+  UsersRound,
+} from 'lucide-react';
 
-const strengths = ['청소년정책 · 사업기획', '청소년시설 개관 · 운영', '프로그램 기획 · 평가', '지역연계 · 네트워크', 'AI 미디어 · 디지털 역량', '공공행정 · 조직관리'];
-const keywords = ['청소년활동', '시설운영', '공공행정', 'AI 교육', '지역연계', '미래역량', '안전관리', '조직운영'];
+const strengths = [
+  '청소년정책 · 사업기획',
+  '청소년시설 개관 · 운영',
+  '프로그램 기획 · 평가',
+  '지역연계 · 네트워크',
+  'AI 미디어 · 디지털 역량',
+  '공공행정 · 조직관리',
+];
+const keywords = [
+  '청소년활동',
+  '시설운영',
+  '공공행정',
+  'AI 교육',
+  '지역연계',
+  '미래역량',
+  '안전관리',
+  '조직운영',
+];
 
 export default function Home() {
-  return <main>
-    <section className="hero" id="top">
-      <nav className="nav shell" aria-label="주 메뉴"><a className="brand" href="#top" aria-label="이희윤 홈">이희윤<span>.</span></a><div className="nav-links"><a href="#about">소개</a><a href="#expertise">전문 분야</a><a href="#impact">성과</a></div><a className="nav-cta" href="https://wwisely.com/" target="_blank" rel="noreferrer">Story <ArrowUpRight size={15} /></a></nav>
-      <div className="hero-grid shell"><div className="hero-copy"><p className="eyebrow"><span /> YOUTH · COMMUNITY · AI</p><h1>성장의 가능성이<br />현실이 되는 <em>현장</em>을<br />만듭니다.</h1><p className="lead">25년의 청소년활동 경험과 공공행정·AI 활용 역량으로 청소년과 지역사회의 지속 가능한 성장을 설계합니다.</p><div className="hero-actions"><a className="button button-primary" href="#about">이희윤을 소개합니다 <ArrowRight size={18} /></a><a className="text-link" href="https://wwisely.com/" target="_blank" rel="noreferrer">함께 찾아가는 삶의 지혜 <ArrowUpRight size={16} /></a></div></div><div className="portrait-wrap"><div className="portrait-ring" /><img className="portrait" src="/lee-hee-yoon.png" alt="이희윤" /><div className="portrait-label"><strong>이희윤</strong><span>청소년활동 · 시설운영 · AI 교육</span></div><div className="year-badge"><b>25</b><span>YEARS<br />IN FIELD</span></div></div></div>
-      <div className="marquee"><span>청소년과 함께하는 것이 제 천직입니다.</span><Sparkles size={16} /><span>청소년과 함께하는 것이 제 천직입니다.</span><Sparkles size={16} /><span>청소년과 함께하는 것이 제 천직입니다.</span></div>
-    </section>
-    <section className="section intro" id="about"><div className="shell intro-grid"><p className="section-tag">01 / ABOUT</p><div><h2>답을 알려주기보다,<br /><em>가능성을 발견할 환경</em>을<br />만듭니다.</h2><p className="body-copy">이희윤은 청소년지도사이자 평택시서부청소년센터 초대 센터장입니다. 현장의 청소년이 스스로 가능성을 찾고, 지역이 함께 성장할 수 있도록 사람과 자원을 연결해 왔습니다.</p><div className="mini-stats"><div><b>25년</b><span>청소년활동 현장</span></div><div><b>1호</b><span>청소년지도사</span></div><div><b>성장·참여·연결</b><span>핵심 가치</span></div></div></div></div></section>
-    <section className="section expertise" id="expertise"><div className="shell"><div className="section-head"><p className="section-tag">02 / EXPERTISE</p><h2>현장을 이해하는<br /><em>실천형 전문성</em></h2></div><div className="expertise-grid">{strengths.map((item, index) => <article className="expertise-card" key={item}><span>0{index + 1}</span><h3>{item}</h3><ArrowUpRight size={21} /></article>)}</div></div></section>
-    <section className="section impact" id="impact"><div className="shell impact-grid"><div><p className="section-tag">03 / IMPACT</p><h2>현장에서<br />쌓아 온 <em>신뢰</em></h2></div><div className="impact-list"><div><Building2 /><p><b>평택시서부청소년센터</b><span>초대 센터장으로서 신규 청소년시설 개관 · 운영</span></p><strong>01</strong></div><div><UsersRound /><p><b>서부권 청소년활동 거점</b><span>지역사회와 협력하는 지속 가능한 연결 구조 구축</span></p><strong>02</strong></div><div><BrainCircuit /><p><b>AI와 청소년활동의 연결</b><span>교육 · 콘텐츠 기획을 통한 미래 역량 확장</span></p><strong>03</strong></div></div></div></section>
-    <section className="section keyword-section"><div className="shell keyword-card"><div><p className="section-tag">THE WORK, IN WORDS</p><h2>연결을 통해<br />더 멀리 갑니다.</h2></div><div className="keywords">{keywords.map((word) => <span key={word}><Check size={14} /> {word}</span>)}</div></div></section>
-    <footer><div className="shell footer-inner"><div><a className="brand" href="#top">이희윤<span>.</span></a><p>청소년의 오늘과 지역의 내일을 연결합니다.</p></div><a className="button button-light" href="https://wwisely.com/" target="_blank" rel="noreferrer"><BookOpen size={17} /> 이야기 보러가기</a></div><p className="shell copyright">© 2026 LEE HEE YOON. ALL RIGHTS RESERVED.</p></footer>
-  </main>;
+  return (
+    <main>
+      <section className="hero" id="top">
+        <nav className="nav shell" aria-label="주 메뉴">
+          <a className="brand" href="#top" aria-label="이희윤 홈">
+            이희윤<span>.</span>
+          </a>
+          <div className="nav-links">
+            <a href="#about">소개</a>
+            <a href="#expertise">전문 분야</a>
+            <a href="#impact">성과</a>
+          </div>
+          <a
+            className="nav-cta"
+            href="https://wwisely.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Story <ArrowUpRight size={15} />
+          </a>
+        </nav>
+        <div className="hero-grid shell">
+          <div className="hero-copy">
+            <p className="eyebrow">
+              <span /> YOUTH · COMMUNITY · AI
+            </p>
+            <h1>
+              성장의 가능성이
+              <br />
+              현실이 되는 <em>현장</em>을<br />
+              만듭니다.
+            </h1>
+            <p className="lead">
+              25년의 청소년활동 경험과 공공행정·AI 활용 역량으로 청소년과
+              지역사회의 지속 가능한 성장을 설계합니다.
+            </p>
+            <div className="hero-actions">
+              <a className="button button-primary" href="#about">
+                이희윤을 소개합니다 <ArrowRight size={18} />
+              </a>
+              <a
+                className="text-link"
+                href="https://wwisely.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                함께 찾아가는 삶의 지혜 <ArrowUpRight size={16} />
+              </a>
+            </div>
+          </div>
+          <div className="portrait-wrap">
+            <div className="portrait-ring" />
+            <img className="portrait" src="/lee-hee-yoon.png" alt="이희윤" />
+            <div className="portrait-label">
+              <strong>이희윤</strong>
+              <span>청소년활동 · 시설운영 · AI 교육</span>
+            </div>
+            <div className="year-badge">
+              <b>25</b>
+              <span>
+                YEARS
+                <br />
+                IN FIELD
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="marquee">
+          <span>청소년과 함께하는 것이 제 천직입니다.</span>
+          <Sparkles size={16} />
+          <span>청소년과 함께하는 것이 제 천직입니다.</span>
+          <Sparkles size={16} />
+          <span>청소년과 함께하는 것이 제 천직입니다.</span>
+        </div>
+      </section>
+      <section className="section intro" id="about">
+        <div className="shell intro-grid">
+          <p className="section-tag">01 / ABOUT</p>
+          <div>
+          <h2 className="rounded-heading">
+              답을 알려주기보다,
+              <br />
+              <em>가능성을 발견할 환경</em>을<br />
+              만듭니다.
+            </h2>
+            <p className="body-copy">
+              이희윤은 청소년지도사이자 평택시서부청소년센터 초대 센터장입니다.
+              현장의 청소년이 스스로 가능성을 찾고, 지역이 함께 성장할 수 있도록
+              사람과 자원을 연결해 왔습니다.
+            </p>
+            <div className="mini-stats">
+              <div>
+                <b>25년</b>
+                <span>청소년활동 현장</span>
+              </div>
+              <div>
+                <b>1호</b>
+                <span>청소년지도사</span>
+              </div>
+              <div>
+                <b>성장·참여·연결</b>
+                <span>핵심 가치</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section expertise" id="expertise">
+        <div className="shell">
+          <div className="section-head">
+            <p className="section-tag">02 / EXPERTISE</p>
+            <h2>
+              현장을 이해하는
+              <br />
+              <em>실천형 전문성</em>
+            </h2>
+          </div>
+          <div className="expertise-grid">
+            {strengths.map((item, index) => (
+              <article className="expertise-card" key={item}>
+                <span>0{index + 1}</span>
+                <h3>{item}</h3>
+                <ArrowUpRight size={21} />
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section impact" id="impact">
+        <div className="shell impact-grid">
+          <div>
+            <p className="section-tag">03 / IMPACT</p>
+            <h2>
+              현장에서
+              <br />
+              쌓아 온 <em>신뢰</em>
+            </h2>
+          </div>
+          <div className="impact-list">
+            <div>
+              <Building2 />
+              <p>
+                <b>평택시서부청소년센터</b>
+                <span>초대 센터장으로서 신규 청소년시설 개관 · 운영</span>
+              </p>
+              <strong>01</strong>
+            </div>
+            <div>
+              <UsersRound />
+              <p>
+                <b>서부권 청소년활동 거점</b>
+                <span>지역사회와 협력하는 지속 가능한 연결 구조 구축</span>
+              </p>
+              <strong>02</strong>
+            </div>
+            <div>
+              <BrainCircuit />
+              <p>
+                <b>AI와 청소년활동의 연결</b>
+                <span>교육 · 콘텐츠 기획을 통한 미래 역량 확장</span>
+              </p>
+              <strong>03</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section keyword-section">
+        <div className="shell keyword-card">
+          <div>
+            <p className="section-tag">THE WORK, IN WORDS</p>
+            <h2>
+              연결을 통해
+              <br />더 멀리 갑니다.
+            </h2>
+          </div>
+          <div className="keywords">
+            {keywords.map((word) => (
+              <span key={word}>
+                <Check size={14} /> {word}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div className="shell footer-inner">
+          <div>
+            <a className="brand" href="#top">
+              이희윤<span>.</span>
+            </a>
+            <p>청소년의 오늘과 지역의 내일을 연결합니다.</p>
+          </div>
+          <a
+            className="button button-light"
+            href="https://wwisely.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BookOpen size={17} /> 이야기 보러가기
+          </a>
+        </div>
+        <p className="shell copyright">
+          © 2026 LEE HEE YOON. ALL RIGHTS RESERVED.
+        </p>
+      </footer>
+    </main>
+  );
 }
